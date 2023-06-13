@@ -9,6 +9,9 @@
   --primary-color: #DD5C5C;
   --secondary-color: #2E0653;
   --primary-font: "Poppins", sans-serif;
+  --shadow: 0px 5px 25px rgba(0, 0, 0, 0.15);
+  --black: #333;
+  --surface:#FCEEEE;
 }
 
 body {
@@ -20,7 +23,264 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background-color: var(--primary-color);
-  min-height: 5vmin;
+  background-color: #ffffff;
+  min-height: 2vmin;
   padding: 1.5vmin;
+  box-shadow: var(--shadow);
+}
+header .contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+header .contact .contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+header .contact .contact-item a {
+  color: var(--primary-color);
+  font-size: 2vmin;
+  margin: 0 1vmin;
+}
+header .contact .contact-item span {
+  color: var(--secondary-color);
+  margin: 0 1vmin;
+}
+
+.landing {
+  height: calc(100vh - 10vmin);
+  width: 100%;
+  padding: 0 5vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.landing .landing-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  width: 40%;
+}
+.landing .landing-text h1 {
+  font-size: 9vmin;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+.landing .landing-text h1 b {
+  font-weight: 700;
+}
+.landing .landing-text h2 {
+  font-size: 5vmin;
+  color: var(--black);
+  font-weight: 500;
+  margin-bottom: 1vmin;
+}
+.landing .landing-text h2 b {
+  font-weight: 700;
+}
+.landing .landing-text p {
+  font-size: 3vmin;
+  color: var(--black);
+  font-weight: 300;
+  margin-bottom: 1vmin;
+}
+.landing .landing-text .btn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 2vmin 4vmin;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 3vmin;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 2vmin;
+  transition: all 0.3s ease-in-out;
+  box-shadow: var(--shadow);
+}
+.landing .landing-text .btn:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+.landing .landing-text .btn a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.landing .landing-image {
+  width: 50%;
+}
+.landing .landing-image img {
+  width: 100%;
+}
+
+.responsibility {
+  width: 100%;
+  padding: 10vmin;
+  background-color: var(--surface);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.responsibility .responsibility-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.responsibility .responsibility-text h1 {
+  font-size: 7vmin;
+  line-height: 7.5vmin;
+  color: var(--secondary-color);
+  font-weight: 500;
+  margin-bottom: 7vmin;
+  text-align: center;
+  width: 100%;
+}
+.responsibility .responsibility-text h1 b {
+  font-weight: 700;
+}
+.responsibility .responsibility-text p {
+  font-size: 3vmin;
+  color: var(--black);
+  font-weight: 300;
+  width: 70%;
+  text-align: left;
+  margin-bottom: 5vmin;
+  border: 1px solid var(--secondary-color);
+  padding: 2vmin;
+  border-radius: 5px;
+}
+
+.role {
+  width: 100%;
+  padding: 10vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.role .role-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  width: 40%;
+}
+.role .role-text h1 {
+  font-size: 7vmin;
+  line-height: 7.5vmin;
+  color: var(--secondary-color);
+  font-weight: 500;
+  margin-bottom: 2vmin;
+}
+.role .role-text h1 b {
+  font-weight: 700;
+}
+.role .role-text p {
+  font-size: 3vmin;
+  color: var(--black);
+  font-weight: 300;
+  margin-bottom: 1vmin;
+}
+.role .role-image {
+  width: 50%;
+}
+.role .role-image img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    min-height: 5vmin;
+    padding: 2vmin;
+  }
+  header .contact .contact-item a {
+    font-size: 3vmin;
+    cursor: pointer;
+    margin: 0 2vmin;
+  }
+  header .contact .contact-item span {
+    display: none;
+  }
+  .landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 5vmin;
+  }
+  .landing .landing-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 7vmin;
+    width: 100%;
+  }
+  .landing .landing-text h1 {
+    font-size: 7vmin;
+  }
+  .landing .landing-text h2 {
+    font-size: 4vmin;
+  }
+  .landing .landing-text p {
+    width: 75%;
+    text-align: center;
+  }
+  .landing .landing-image {
+    width: 100%;
+  }
+  .responsibility {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5vmin;
+  }
+  .responsibility .responsibility-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 7vmin;
+    width: 100%;
+  }
+  .responsibility .responsibility-text h1 {
+    font-size: 5vmin;
+  }
+  .responsibility .responsibility-text p {
+    text-align: center;
+    width: 100%;
+  }
+  .role {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5vmin;
+  }
+  .role .role-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 7vmin;
+    width: 100%;
+  }
+  .role .role-text h1 {
+    font-size: 5vmin;
+  }
+  .role .role-text p {
+    text-align: center;
+  }
+  .role .role-image {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
