@@ -1,0 +1,22 @@
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #DD5C5C;
+    --secondary-color: #2E0653;
+    --primary-font: 'Poppins', sans-serif;
+}
+body{
+    font-family: var(--primary-font);
+}
+header{
+    @include flexprops(row, space-between, center);
+    background-color: var(--primary-color);
+    min-height: 5vmin;
+    padding: 1.5vmin;
+}
