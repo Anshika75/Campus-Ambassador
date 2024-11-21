@@ -2,4 +2,4 @@
 CA website
 
 # View
-https://maggi75.me/Campus-Ambassador/
+https://anshika75.github.io/Campus-Ambassador/
